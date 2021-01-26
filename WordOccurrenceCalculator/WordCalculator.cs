@@ -12,26 +12,17 @@ namespace WordOccurrenceCalculator
     {
         public static WordOccurrence[] CalculateOccurrences(ArrayList inputList)
         {
-            try
-            {
-                if (inputList.Count <= 0)
-                {
-                    throw new Exception("Invalid Input");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-                WordOccurrence[] obj = new WordOccurrence[inputList.Count];
+            
+            WordOccurrence[] obj = new WordOccurrence[inputList.Count];
+           
                 for(int i = 0; i < inputList.Count; i++)
                 {
                     obj[i] = new WordOccurrence();
                     obj[i].Word = inputList[i].ToString();
 
-                    //counting the occurrences of the word
-                    
-                    for (int j = 0; j < inputList.Count; j++)
+                //counting the occurrences of the word
+
+                for (int j = 0; j < inputList.Count; j++)
                     {
                         String countWord = inputList[j].ToString();
                         if (obj[i].Word == countWord)
