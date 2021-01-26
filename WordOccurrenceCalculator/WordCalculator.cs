@@ -31,9 +31,9 @@ namespace WordOccurrenceCalculator
                 }
                 return obj;
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                throw new Exception("Invalid Input");
             }
         }
     }
