@@ -37,8 +37,8 @@ namespace WordOccurrenceCalculator
 
             for (int i = 0; i < obj.Length; i++)
             {
-                string outOne = obj[i].Word + obj[i].Count + "\n";
-                outputString = outputString + outOne;
+                string countResult = obj[i].Word +" = " + obj[i].Count + "\n";
+                outputString = outputString + countResult;
             }
             label1.Text = outputString;
         }
