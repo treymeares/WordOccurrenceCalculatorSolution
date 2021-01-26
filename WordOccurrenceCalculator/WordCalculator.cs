@@ -14,6 +14,15 @@ namespace WordOccurrenceCalculator
         {
             try
             {
+                if (inputList.Count <= 0)
+                {
+                    throw new Exception("Invalid Input");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
                 WordOccurrence[] obj = new WordOccurrence[inputList.Count];
                 for(int i = 0; i < inputList.Count; i++)
                 {
@@ -22,19 +31,16 @@ namespace WordOccurrenceCalculator
 
                     //counting the occurrences of the word
                     
-                    for (int j = 0; i < inputList.Count; j++)
+                    for (int j = 0; j < inputList.Count; j++)
                     {
-                        String countWord = inputList.ToString();
+                        String countWord = inputList[j].ToString();
                         if (obj[i].Word == countWord)
                             obj[i].Count++;
                     }
                 }
                 return obj;
             }
-            catch 
-            {
-                throw new Exception("Invalid Input");
-            }
+           
         }
     }
-}
+
