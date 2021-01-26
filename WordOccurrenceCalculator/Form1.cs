@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,26 @@ namespace WordOccurrenceCalculator
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String inputText = textBox1.Text;
+            String[] createSplitString = inputText.Split(' ');
+
+            ArrayList inputList = new ArrayList();
+            for (int i = 0; i < createSplitString.Length; i++)
+                inputList.Add(createSplitString[i]);
+
+            WordOccurrence[] obj = WordCalculator.CalculateOccurrences(inputList);
+            String outputString = "";
+
+            for (int i = 0; i < obj.Length; i++)
+            {
+                string outOne = obj[i].Word + obj[i].Count + "\n";
+                outputString = outputString + outOne;
+            }
+            label1.Text = outputString;
         }
     }
 }
