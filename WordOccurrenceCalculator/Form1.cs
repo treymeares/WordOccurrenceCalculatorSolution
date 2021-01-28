@@ -23,7 +23,7 @@ namespace WordOccurrenceCalculator
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             String inputText = textBox1.Text.Trim();
             String[] createSplitString = inputText.Split(' ');

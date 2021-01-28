@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WordOccurrenceCalculator
 {
-    class WordCalculator
+    public class WordCalculator
     {
         public static WordOccurrence[] CalculateOccurrences(ArrayList inputList)
         {
@@ -17,8 +17,10 @@ namespace WordOccurrenceCalculator
            
                 for(int i = 0; i < inputList.Count; i++)
                 {
-                    obj[i] = new WordOccurrence();
-                    obj[i].Word = inputList[i].ToString();
+                obj[i] = new WordOccurrence
+                {
+                    Word = inputList[i].ToString()
+                };
 
                 //counting the occurrences of the word
 
@@ -31,7 +33,8 @@ namespace WordOccurrenceCalculator
                 }
                 return obj;
             }
-           
-        }
+
+
+         }
     }
 
