@@ -51,21 +51,16 @@ namespace UnitTestProject1
         [Test]
         public void Tests()
         {
-            //Arrange
-            ArrayList inputList = new ArrayList();
-            var expected = "";
-
-            //Act
-            var actualOutput = WordCalculator.CalculateOccurrences(inputList);
-
+            
             // Using a method as a delegate
             Assert.Throws<ArgumentNullException>(MethodThatThrows);
-            NUnit.Framework.Assert.AreEqual(inputList, actualOutput, "Invalid Result");
+            
         }
         
         void MethodThatThrows()
         {
-            throw new ArgumentNullException();
+            ArrayList inputList = new ArrayList();
+            var actualOutput = WordCalculator.CalculateOccurrences(inputList);
         }
 
 

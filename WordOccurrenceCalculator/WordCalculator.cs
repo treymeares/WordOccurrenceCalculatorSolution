@@ -21,7 +21,7 @@ namespace WordOccurrenceCalculator
             {
                 if (inputList.Count < 1)
                 {
-                    throw new ArgumentNullException();
+                    throw new ArgumentNullException("Invalid Entry");
                 }
 
                 for (int i = 0; i < inputList.Count; i++)
@@ -46,9 +46,9 @@ namespace WordOccurrenceCalculator
             }
 
 
-            catch (ArgumentNullException)
+            catch(ArgumentNullException)
             {
-
+                throw new ArgumentNullException();
                 MessageBox.Show("Invalid Entry");
             }
 
