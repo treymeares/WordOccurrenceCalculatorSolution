@@ -17,47 +17,41 @@ namespace WordOccurrenceCalculator
 
             WordOccurrence[] obj = new WordOccurrence[inputList.Count];
 
-            try
+
+            if (inputList.Count < 1)
             {
-                if (inputList.Count < 1)
-                {
-                    throw new ArgumentNullException();
-                }
-
-                for (int i = 0; i < inputList.Count; i++)
-                {
-
-                    obj[i] = new WordOccurrence
-                    {
-                        Word = inputList[i].ToString()
-
-                    };
-
-                    //counting the occurrences of the word
-
-                    for (int j = 0; j < inputList.Count; j++)
-                    {
-                        String countWord = inputList[j].ToString();
-                        if (obj[i].Word == countWord)
-                            obj[i].Count++;
-                    }
-
-                }
+                throw new System.ArgumentNullException("Invalid Input");
             }
 
-
-            catch(ArgumentNullException e)
+            for (int i = 0; i < inputList.Count; i++)
             {
-                MessageBox.Show(e.Message);
+
+                obj[i] = new WordOccurrence
+                {
+                    Word = inputList[i].ToString()
+
+                };
+
+                //counting the occurrences of the word
+
+                for (int j = 0; j < inputList.Count; j++)
+                {
+                    String countWord = inputList[j].ToString();
+                    if (obj[i].Word == countWord)
+                        obj[i].Count++;
+                }
+
             }
+
 
             return obj;
         }
 
 
     }
-
 }
+
+
 
 
 
