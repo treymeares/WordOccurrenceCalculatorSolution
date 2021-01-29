@@ -12,7 +12,7 @@ namespace UnitTestProject1
     {
         [Test]
 
-        public void Test1()
+        public void CalculateOccurrencesTest()
         {
             //Arrange
             String inputText = "This little piggy";
@@ -49,7 +49,7 @@ namespace UnitTestProject1
 
 
         [Test]
-        public void Tests()
+        public void CalculateOccurrencesShouldThrowExceptionsts()
         {
             
             // Using a method as a delegate
