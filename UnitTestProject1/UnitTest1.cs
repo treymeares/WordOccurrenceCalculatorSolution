@@ -57,7 +57,8 @@ namespace UnitTestProject1
             var expectedOutput = "";
             var actualOutput = WordCalculator.CalculateOccurrences(inputList);
 
-            NUnit.Framework.Assert.AreEqual(inputList, actualOutput, "Invalid Entry");
+            NUnit.Framework.Assert.Throws<ArgumentNullException>( delegate { throw new Arg
+  })
         }
       }
     }
