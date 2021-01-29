@@ -5,7 +5,10 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordOccurrenceCalculator", "WordOccurrenceCalculator\WordOccurrenceCalculator.csproj", "{9A0B3845-5982-4ADB-BDB0-E63B90C2C47F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitTestProject1\NUnitTestProject1.csproj", "{95DB776C-2EC5-4916-97FA-DB7225490F79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{6F2479DC-0411-479D-9E5E-059ACFE50A5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A0B3845-5982-4ADB-BDB0-E63B90C2C47F} = {9A0B3845-5982-4ADB-BDB0-E63B90C2C47F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +20,10 @@ Global
 		{9A0B3845-5982-4ADB-BDB0-E63B90C2C47F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A0B3845-5982-4ADB-BDB0-E63B90C2C47F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A0B3845-5982-4ADB-BDB0-E63B90C2C47F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95DB776C-2EC5-4916-97FA-DB7225490F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95DB776C-2EC5-4916-97FA-DB7225490F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95DB776C-2EC5-4916-97FA-DB7225490F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95DB776C-2EC5-4916-97FA-DB7225490F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2479DC-0411-479D-9E5E-059ACFE50A5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2479DC-0411-479D-9E5E-059ACFE50A5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2479DC-0411-479D-9E5E-059ACFE50A5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2479DC-0411-479D-9E5E-059ACFE50A5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

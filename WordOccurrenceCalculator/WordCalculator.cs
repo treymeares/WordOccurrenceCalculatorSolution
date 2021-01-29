@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Windows.Forms;
+using NUnit.Framework;
 
 namespace WordOccurrenceCalculator
 {
@@ -20,12 +21,12 @@ namespace WordOccurrenceCalculator
             {
                 if (inputList.Count < 1)
                 {
-                    throw new NotImplementedException();
+                    throw new ArgumentNullException();
                 }
 
                 for (int i = 0; i < inputList.Count; i++)
                 {
-                    
+
                     obj[i] = new WordOccurrence
                     {
                         Word = inputList[i].ToString()
@@ -41,20 +42,25 @@ namespace WordOccurrenceCalculator
                         if (obj[i].Word == countWord)
                             obj[i].Count++;
                     }
+
                 }
             }
 
-            catch(NotImplementedException)
+
+            catch (ArgumentNullException)
             {
-                
+
                 MessageBox.Show("Invalid Entry");
             }
-            
+
             return obj;
         }
 
+
     }
+
 }
+
 
 
 

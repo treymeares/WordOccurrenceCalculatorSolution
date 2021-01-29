@@ -39,7 +39,7 @@ namespace WordOccurrenceCalculator
             }
 
             WordOccurrence[] obj = WordCalculator.CalculateOccurrences(inputList);
-            String outputString = null;
+            String outputString = "";
 
             for (int i = 0; i < obj.Length; i++)
             {
