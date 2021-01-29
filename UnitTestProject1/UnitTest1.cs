@@ -3,8 +3,7 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using WordOccurrenceCalculator;
-
-
+using Assert = NUnit.Framework.Assert;
 
 namespace UnitTestProject1
 {
@@ -12,20 +11,20 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [Test]
-        
-            public void Test1()
-            {
-            //Arrange
-                String inputText = "This little piggy";
-                String[] createSplitString = inputText.Split(' ');
 
-                ArrayList inputList = new ArrayList();
-                for (int i = 0; i < createSplitString.Length; i++)
-                    inputList.Add(createSplitString[i]);
-                if (createSplitString[0] == "")
-                {
-                    inputList.Remove(createSplitString[0]);
-                }
+        public void Test1()
+        {
+            //Arrange
+            String inputText = "This little piggy";
+            String[] createSplitString = inputText.Split(' ');
+
+            ArrayList inputList = new ArrayList();
+            for (int i = 0; i < createSplitString.Length; i++)
+                inputList.Add(createSplitString[i]);
+            if (createSplitString[0] == "")
+            {
+                inputList.Remove(createSplitString[0]);
+            }
 
             WordOccurrence[] obj = WordCalculator.CalculateOccurrences(inputList);
             String outputString = "";
@@ -45,22 +44,36 @@ namespace UnitTestProject1
 
             //Assert
             NUnit.Framework.Assert.AreEqual(expectedOutput, finalOutput, "Invalid Result");
-            }
+        }
+
+
 
         [Test]
-        public void Test2()
+        public void Tests()
         {
-
+            //Arrange
             ArrayList inputList = new ArrayList();
+            var expected = "";
 
-
-            var expectedOutput = "";
+            //Act
             var actualOutput = WordCalculator.CalculateOccurrences(inputList);
 
-            NUnit.Framework.Assert.Throws<ArgumentNullException>( delegate { throw new Arg
-  })
+            // Using a method as a delegate
+            Assert.Throws<ArgumentNullException>(MethodThatThrows);
+            NUnit.Framework.Assert.AreEqual(inputList, actualOutput, "Invalid Result");
         }
-      }
+        
+        void MethodThatThrows()
+        {
+            throw new ArgumentNullException();
+        }
+
+
     }
+}
+
+
+      
+    
 
 

@@ -33,7 +33,6 @@ namespace WordOccurrenceCalculator
 
                     };
 
-
                     //counting the occurrences of the word
 
                     for (int j = 0; j < inputList.Count; j++)
